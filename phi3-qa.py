@@ -120,7 +120,7 @@ if __name__ == "__main__":
         "-m",
         "--model",
         type=str,
-        default="D:\\llm\\tmp\\directml\\directml-int4-awq-block-128",
+        default="D:\\llm\\models\\directml\\directml-int4-awq-block-128",
         required=False,
         help="Onnx model folder path (must contain config.json and model.onnx)",
     )
