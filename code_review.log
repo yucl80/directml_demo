@@ -1,0 +1,52 @@
+2024-06-23 07:43:54.895 | ERROR    | __main__:create_review_request:37 - Exception while creating review request: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-06-23 07:44:49.385 | ERROR    | __main__:create_review_request:38 - Exception while creating review request: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-06-23 07:45:23.960 | ERROR    | __main__:create_review_request:38 - Exception while creating review request: Missing required arguments; Expected either ('messages' and 'model') or ('messages', 'model' and 'stream') arguments to be given
+2024-06-23 07:46:53.629 | ERROR    | __main__:create_review_request:38 - Exception while creating review request: Missing required arguments; Expected either ('messages' and 'model') or ('messages', 'model' and 'stream') arguments to be given
+2024-06-23 07:47:07.921 | ERROR    | __main__:create_review_request:38 - Exception while creating review request: 'NoneType' object is not subscriptable
+2024-06-23 07:47:48.888 | ERROR    | __main__:create_review_request:38 - Exception while creating review request: 'NoneType' object is not subscriptable
+2024-06-23 07:48:38.496 | ERROR    | __main__:create_review_request:38 - Exception while creating review request: 'Choice' object has no attribute 'text'
+2024-06-23 09:35:58.311 | ERROR    | __main__:create_review_request:39 - Exception while creating review request: Connection error.
+2024-06-23 10:25:55.093 | ERROR    | __main__:create_review_request:27 - 创建审查请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-24 14:13:35.237 | ERROR    | __main__:create_review_request:54 - 创建审查请求时异常: Error code: 400 - {'error': '<LM Studio error> Exit code 0.. Error Data: n/a, Additional Data: n/a'}
+2024-06-25 09:52:21.684 | ERROR    | __main__:create_review_request:52 - 创建审查请求时异常: Error code: 500 - {'error': 'No models loaded. Please load a model in LM Studio first.'}
+2024-06-25 09:55:58.918 | ERROR    | __main__:create_review_request:52 - 创建审查请求时异常: Connection error.
+2024-06-25 10:15:31.796 | ERROR    | __main__:create_review_request:52 - 创建审查请求时异常: Unable to round-trip http request to upstream: dial tcp 192.168.32.129:8000: i/o timeout
+2024-06-25 10:24:46.743 | ERROR    | __main__:create_review_request:52 - 创建审查请求时异常: Connection error.
+2024-06-25 10:32:50.499 | ERROR    | __main__:create_review_request:52 - 创建审查请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-25 17:16:32.598 | ERROR    | __main__:create_review_request:53 - 创建审查请求时异常: Error code: 500 - {'error': 'No models loaded. Please load a model in LM Studio first.'}
+2024-06-26 13:35:12.110 | ERROR    | __main__:create_review_request:53 - 创建审查请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-26 13:36:09.371 | ERROR    | __main__:create_review_request:54 - 创建审查请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-26 13:39:57.672 | ERROR    | __main__:create_review_request:54 - 创建审查请求时异常: Connection error.
+2024-06-26 13:50:43.455 | ERROR    | __main__:create_review_request:53 - 创建审查请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-27 08:46:17.206 | ERROR    | __main__:send_llm_request:34 - 创建请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-27 08:46:20.056 | ERROR    | __main__:send_llm_request:34 - 创建请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-27 08:46:58.709 | ERROR    | __main__:send_llm_request:34 - 创建请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-27 08:47:01.438 | ERROR    | __main__:send_llm_request:34 - 创建请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-27 08:47:12.754 | ERROR    | __main__:send_llm_request:34 - 创建请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-27 08:47:15.573 | ERROR    | __main__:send_llm_request:34 - 创建请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-27 08:47:34.768 | ERROR    | __main__:send_llm_request:34 - 创建请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-27 08:47:37.376 | ERROR    | __main__:send_llm_request:34 - 创建请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-27 08:47:56.328 | ERROR    | __main__:send_llm_request:34 - 创建请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-27 08:47:58.916 | ERROR    | __main__:send_llm_request:34 - 创建请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-27 09:03:35.534 | ERROR    | __main__:send_llm_request:34 - 创建请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-27 09:03:38.140 | ERROR    | __main__:send_llm_request:34 - 创建请求时异常: Unable to round-trip http request to upstream: dial tcp 127.0.0.1:8000: connectex: No connection could be made because the target machine actively refused it.
+2024-06-27 09:12:01.891 | ERROR    | __main__:send_llm_request:28 - 创建请求时异常: Error code: 400 - {'error': "Your payload's 'messages' array in misformatted. Itmust only contain objects with a 'role' field. Got 'undefined'."}
+2024-06-27 09:12:01.899 | ERROR    | __main__:send_llm_request:28 - 创建请求时异常: Error code: 400 - {'error': "Your payload's 'messages' array in misformatted. Itmust only contain objects with a 'role' field. Got 'undefined'."}
