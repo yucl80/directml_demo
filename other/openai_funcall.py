@@ -2,7 +2,7 @@ from openai import OpenAI
 import json
 import time
 
-base_url = "http://localhost:5272/v1/"
+base_url = "http://localhost:8000/v1/"
 
 
 client = OpenAI(base_url=base_url, api_key="YOUR_API_KEY")
@@ -40,7 +40,7 @@ def function_chat1():
     functions = json.dumps(function_spec, indent=4)
 
     messages = [
-        {"role": "functions", "content": functions},
+        # {"role": "functions", "content": functions},
         {
             "role": "system",
             "content": "You are a helpful assistant with access to functions. Use them if required.",
@@ -107,6 +107,6 @@ def function_chat():
 
 if __name__ == "__main__":
     begintime = time.time()
-    function_chat1()
+    function_chat()
     endtime = time.time()
     print("Time used:", endtime - begintime)

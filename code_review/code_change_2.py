@@ -3,6 +3,7 @@ from loguru import logger
 # 设置API密钥
 api_key = "your-api-key"
 base_url = "http://127.0.0.1:8000/v1/"
+# base_url = "http://192.168.32.129:8000/v1/"
 
 # 设置日志记录
 logger.add("code_review.log", rotation="500 MB")
@@ -14,8 +15,10 @@ client = OpenAI(base_url=base_url, api_key=api_key)
 def send_llm_request(messages):
     try:
         response = client.chat.completions.create(
+            model="deepseek-coder-v2-lite",
             # model="bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF",
-            model="deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct-GGUF",
+            # model="deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct-GGUF",
+            # model="codegeex4",
             messages=messages,
             max_tokens=1000,
             temperature=0.1,
@@ -31,7 +34,7 @@ def send_llm_request(messages):
 
 
 def create_change_request(lang, old_code, new_code):
-    prompt = f"""请务必使用中文回复，不要超过50个字。
+    prompt = f"""请务必使用中文回复,不要超过50个字。
     代码如下：
         旧代码:
         ```{lang}

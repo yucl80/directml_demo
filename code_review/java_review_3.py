@@ -15,7 +15,7 @@ client = OpenAI(base_url=base_url, api_key=api_key)
 def create_review_request(lang, new_code):
     prompt = f"""请审查以下Java代码,关注点包括代码质量、潜在的问题\n    
         问题级别分为3类:
-        1. 致命错误(ritical)
+        1. 致命错误(Critical)
         定义：导致系统崩溃、数据丢失或安全漏洞，内存泄漏，系统安全受到威胁的错误。          
         2. 严重错误(Major)
         定义：会导致功能错误、金额计算精度问题，不正确的行为或性能问题，但不至于系统崩溃。                

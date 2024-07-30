@@ -6,17 +6,46 @@ base_url = "http://127.0.0.1:8000/v1/"
 
 # 设置日志记录
 logger.add("code_review.log", rotation="500 MB")
+from groq import Groq
+GROQ_KEY="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"
 
-from openai import OpenAI
+client = Groq(
+    api_key=GROQ_KEY,
+)
 
-client = OpenAI(base_url=base_url, api_key=api_key)
+
+# from openai import OpenAI
+
+# client = OpenAI(base_url=base_url, api_key=api_key)
+
+prompt="""
+As a code review expert, summarize the function changes enclosed in triple backticks:
+
+1. Be extremely concise and factual.
+2. Focus only on key modifications.
+3. Use brief, technical language.
+4. Omit all opinions, suggestions, and impact analysis.
+
+Rules:
+- Respond in Chinese.
+- Maximum 500 characters.
+- Prioritize brevity over detail.
+
+Changes to summarize:
+```code```
+[Function changes will be inserted here]
+```code```
+"""
 
 
 def send_llm_request(prompt):
     try:
         response = client.chat.completions.create(
             # model="bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF",
-            model="deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct-GGUF",
+            # model="deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct-GGUF",
+           model="llama3-8b-8192",
+        #  model="llama-3.1-70b-versatile",
+        #  model="gemma2-9b-it",
             messages=[
                 # {
                 #     "role": "system",
@@ -29,6 +58,7 @@ def send_llm_request(prompt):
             n=1,
             stop=None,
         )
+        print(response)
         review = response.choices[0]
         return review
     except Exception as e:
@@ -97,6 +127,7 @@ if __name__ == "__main__":
 
     old_code = """
     public class OrderDao{
+        /*asdfsdfasdfsa */
     private double queryOrder(Order order){
         return jdbcTemplate.query(order);
     }
@@ -128,5 +159,7 @@ if __name__ == "__main__":
     print(api_change_summary)
 
     # 创建所有变更点的汇总
-    all_change_list = ""
-    all_summary = create_summary_request(all_change_list)
+    # all_change_list = ""   #500
+    # all_summary = create_summary_request(all_change_list)
+
+ 
