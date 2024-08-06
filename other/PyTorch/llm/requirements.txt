@@ -1,3 +1,0 @@
-transformers
-huggingface_hub
-gradio
